@@ -17,6 +17,34 @@ public class Client {
 		this.cnpj = cnpj;
 		this.valorPago = valorPago;
 	}
+	
+	public static Double iR(String valorPago) {
+		Double taxa = 1.0;
+		Double valorPago1 = Double.parseDouble(valorPago);
+		Double resultado = (valorPago1/100)*taxa;
+		return resultado;
+	}
+	
+	public static Double inss(String valorPago) {
+		Double taxa = 3.5;
+		Double valorPago1 = Double.parseDouble(valorPago);
+		Double resultado = (valorPago1/100)*taxa;
+		return resultado;
+	}
+	
+	public static Double piss(String valorPago) {
+		Double taxa = 0.65;
+		Double valorPago1 = Double.parseDouble(valorPago);
+		Double resultado = (valorPago1/100)*taxa;
+		return resultado;
+	}
+	
+	public static Double cofins(String valorPago) {
+		Double taxa = 3.0;
+		Double valorPago1 = Double.parseDouble(valorPago);
+		Double resultado = (valorPago1/100)*taxa;
+		return resultado;
+	}
 
 	public String getNf() {
 		return nf;

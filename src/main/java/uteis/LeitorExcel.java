@@ -2,6 +2,7 @@ package uteis;
 
 import java.io.IOException;
 
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -11,6 +12,7 @@ public class LeitorExcel {
 
 	static XSSFWorkbook workbook;
 	static XSSFSheet sheet;
+	static Cell cell;
 	
 	public LeitorExcel(String excelPath, String sheetName) {
 		try {
@@ -33,7 +35,6 @@ public class LeitorExcel {
 		Object value = formatter.formatCellValue(sheet.getRow(rowNum).getCell(colNum));
 		return (String) value;
 	}
-	
 	public static int getRowCount() {
 		
 		int rowCount = sheet.getPhysicalNumberOfRows();

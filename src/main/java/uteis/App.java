@@ -35,7 +35,7 @@ public class App {
 			contagem++;
 		}
 				
-		File file1 = new File("out.txt");
+		File file1 = new File("./dados/saida.txt");
 		FileWriter fw = new FileWriter(file1);
 		PrintWriter pw = new PrintWriter(fw);
 		
